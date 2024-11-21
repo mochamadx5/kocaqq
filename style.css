@@ -47,7 +47,7 @@ nav{
 }
 @font-face {
     font-family: 'Isabella';
-    src: url('fonts/Isabella.ttf') format('truetype');
+    src: url('Isabella.ttf') format('truetype');
 }
 
 nav h1 {
