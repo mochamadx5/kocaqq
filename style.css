@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    font-family: chiller;
+    font-family: 'chiller';
     text-align:center;
     color: rgb(255, 0, 0);
     font-size: 20px;
@@ -47,7 +47,7 @@ nav{
 }
 nav h1{
     font-size: 46px;
-    font-family: Isabella;
+    font-family: 'Isabella';
 }
 nav div{
     display: flex;
