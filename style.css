@@ -14,7 +14,7 @@ body{
     background-size: 40%;
     height: 150vh;
     margin: 0;
-}/* Video container */
+}
 .video-container {
     display: grid; /* Menggunakan grid untuk membagi area menjadi kotak-kotak kecil */
     grid-template-columns: repeat(3, 1fr); /* Membagi menjadi 3 kolom, bisa disesuaikan */
@@ -46,12 +46,15 @@ nav{
     z-index: 1000;
 }
 @font-face {
-    font-family: 'Isabella';
-    src: url('./Isabella.ttf') format('truetype');
+    font-family: 'chiller';
+    src: url('./chiller.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Isabella';
+    src: url('Isabella.ttf') format('truetype');
+}
 nav h1 {
-    font-family: 'Isabella', Open Sans;
+    font-family: 'Isabella'; /* Pakai font "Isabella" */
     font-size: 46px;
 }
 nav div{
@@ -81,7 +84,7 @@ section{
     padding: 1em;
 }
 .introduction {
-    padding-top: 100px;
+    padding-top:100px;
     color: rgb(0, 255, 225);
     text-transform: uppercase;
     width: 80%;
@@ -90,7 +93,7 @@ section{
 }
 
 #headline {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* margin-top: 8px; */
     font-size: 30px;
     display: block;
@@ -150,93 +153,51 @@ section{
     display:flex;
     text-decoration-color: rgb(255, 255, 255);
 }
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
     section {
         max-width: 100%;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row; 
         display: flex;
     }
-
     nav h1 {
         font-size: 40px;
     }
-
     nav img {
         width: 70px;
     }
-
-    body {
-        background-size: 100%;
-        max-height: 100%;
-    }
-    .video-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
-        grid-template-rows: repeat(2, 1fr); /* 2 baris */
-    }
-    nav div a {
-        font-size: 16px;
-    }
-
-    #Distopia {
-        flex-direction: column; /* Stack items vertically on small screens */
-        gap: 30px;
-    }
-
-    #Distopia img {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    #headline h1 {
-        font-size: 28px;
-    }
-
-    #rindu {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    section {
-        max-width: 100%;
-        justify-content: center;
-        flex-direction: row; /* Pastikan elemen tetap berada dalam satu baris */
-        display: flex;
-    }
-
-    nav h1 {
-        font-size: 40px;
-    }
-
-    nav img {
-        width: 70px;
-    }
-
     body {
         background-size: 100%;
         background-color: rgb(255, 145, 0);
     }
     .video-container {
-        grid-template-columns: repeat(1, 2fr); /* 2 kolom */
-        grid-template-rows: repeat(1, 2fr); /* 2 baris */
+        grid-template-columns: repeat(1, 2fr); 
+        grid-template-rows: repeat(1, 2fr); 
         opacity: 50%;
     }
     nav div a {
         font-size: 16px;
-    }
-
+        }
     #Distopia {
-        flex-direction: row; /* Mengatur elemen untuk tetap dalam baris */
-        justify-content: space-evenly; /* Menjaga spasi antar elemen */
-        gap: 20px;  /* Menambahkan jarak antar elemen */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        background-color: black;
+        width: 100%;
+        padding: 40px 5% 5%;
     }
-
+    #DistopiaKiri, #DistopiaKanan {
+        width: 100%; 
+    }
+    
     #Distopia img {
-        width: 90%;
-        max-width: 300px;
-    }
-
+        width: 100%; 
+    } 
     #headline h1 {
         font-size: 28px;
     }
@@ -244,67 +205,32 @@ section{
     #rindu {
         font-size: 24px;
     }
-}
-
-@media screen and (max-width: 768px) {
-    section {
-        width: 100%; /* Pastikan section mengambil seluruh lebar layar */
-        justify-content: center;
-        flex-direction: row; /* Pastikan elemen tetap berada dalam satu baris */
-        display: flex;
-        padding: 0 5%; /* Memberikan padding kiri dan kanan yang sama */
+} */
+@media screen and (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-
-    nav h1 {
-        font-size: 40px;
-    }
-
-    nav img {
-        width: 70px;
-    }
-
-    body {
-        background-size: 100%;
+    body{
         background-color: rgb(255, 145, 0);
     }
-
-    nav div a {
-        font-size: 16px;
+    .video-container {
+        grid-template-columns: repeat(1, 2fr); 
+        grid-template-rows: repeat(1, 2fr); 
+        opacity: 50%;
     }
-
-    #Distopia {
-        flex-direction: row; /* Pastikan elemen berada dalam baris */
-        justify-content: space-evenly; /* Menjaga spasi antar elemen */
-        gap: 20px;  /* Menambahkan jarak antar elemen */
-    }
-
-    #Distopia img {
-        width: 90%;
-        max-width: 300px;
-    }
-
-    #headline h1 {
-        font-size: 28px;
-    }
-
-    #rindu {
-        font-size: 24px;
-    }
-}
-
-@media screen and (max-width: 480px) {
     nav {
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        padding: 5px;
+        /* padding: 5px; */
         background: rgb(0, 204, 255);
         position: fixed;
         top: 0;
         width: 100%;
         max-height: 100%;
     }
-
     .Hamburger {
         transform: rotate(90deg);
         font-weight: 800px;
@@ -312,39 +238,49 @@ section{
         font-family: Arial, Helvetica, sans-serif;
         color: black;
     }
-
     section {
         width: 100%;
         flex-direction: column;
-        justify-content: center;
-        padding: 1em 5%; /* Memberikan padding kiri dan kanan yang sama */
+        /* justify-content: center; */
+        /* padding: 1em 5%;  */
         display: flex;
-        gap: 1.5em; /* Consistent gap between items */
     }
-
     nav h1 {
         font-size: 30px;
     }
-
     nav img {
         width: 100px;
     }
-
     nav div {
         display: none;
     }
-
+    
+    #headline h1 {
+        font-size: 30px;
+    }
     #Distopia {
-        flex-direction: row; /* Memastikan elemen berada dalam baris */
-        justify-content: space-around; /* Membuat spasi antar elemen */
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        /* align-items: center; */
+        width: 100%;
+        padding: 30px 3% 3% 3%;
+        /* overflow: hidden; Pastikan elemen tidak melebihi batas */
     }
-
+    #DistopiaKiri, #DistopiaKanan {
+        width: 100%; /* Ambil seluruh lebar parent */
+        text-align: center;
+        /* justify-content: center; */
+    }
     #Distopia img {
-        width: 150px;
-        object-fit: cover;
+        width: 120px; /* Ukuran gambar tetap proporsional */
     }
-
-    #rindu {
-        font-size: 20px;
+    #Distopia a {
+        font-size: 14px; 
+    }
+    #Distopia p {
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        font-style: italic;
     }
 }
