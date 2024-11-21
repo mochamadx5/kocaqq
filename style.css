@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'isabella' ;
+    src: url(Isabella.ttf);
+}
 body{
     font-family: 'chiller';
     text-align:center;
@@ -47,7 +51,7 @@ nav{
 }
 nav h1{
     font-size: 46px;
-    font-family: 'Isabella';
+    font-family: Isabella;
 }
 nav div{
     display: flex;
